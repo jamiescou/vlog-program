@@ -1,0 +1,31 @@
+<cu-custom bgColor="bg-gradual-green" isCustom="{{true}}"><view slot="content">VLOG详情</view></cu-custom>
+<view class="cu-card case {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+    <view class="image">
+      <video style="width:100%;height:1000rpx" src="{{workInfo.videoUrl}}"></video>
+      
+    </view>
+    <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">{{workInfo.description}}</text>
+      </view>
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{workInfo.tagImg}});"></view>
+        <view class="content flex-sub">
+          <view class="text-grey">{{workInfo.tagName}}</view>
+          <view class="text-gray text-sm flex justify-between">
+            {{workInfo.hours}}
+            <view class="text-gray text-sm">
+              <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
+              <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
+              <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  </view>
+
+
+

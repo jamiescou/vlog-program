@@ -1,0 +1,33 @@
+.fixedhead{
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.container{
+    position: absolute;
+    top: 130px;
+    bottom: 0;
+    width: 100%;
+    overflow: auto
+}
+.search-content{
+  position: fixed;
+  width: 100%;
+  top: 129px;
+  z-index: 1002;
+
+}
+.scrolltop{
+  top: 180px;
+}
+.no-data{
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 0.6rem;
+}
+.vlogadd{
+  position: absolute;
+  right: 5%;
+  bottom: 100rpx;
+  font-size: 100rpx;
+}

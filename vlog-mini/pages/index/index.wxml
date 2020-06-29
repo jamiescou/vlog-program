@@ -1,0 +1,54 @@
+<cu-custom bgColor="bg-gradual-green">
+  <view slot="content">VLOG分享吧</view>
+</cu-custom>
+<view class="bg-white radius shadow shadow-lg fixedhead">
+  <view class="flex justify-center">
+  <scroll-view scroll-x class="bg-green nav text-center">
+    <view class="cu-item {{1==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="1">
+      <text class="cuIcon-ticket"></text> 昨日VLOG
+    </view>
+    <view class="cu-item {{2==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="2">
+      <text class="cuIcon-redpacket"></text> 今日VLOG
+    </view>
+    <view class="cu-item {{3==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="3">
+      <text class="cuIcon-samefill"></text> VLOG搜索
+    </view>
+  </scroll-view>
+  </view>
+</view>
+<view wx:if="{{3==TabCur}}" class="cu-form-group search-content">
+		<view class="title">VLOG搜索</view>
+		<input value="{{search}}" bindinput="bindKeyInput" placeholder="输入VLOG信息"></input>
+		<text class="cuIcon-search text-orange"></text>
+	</view>
+<scroll-view scroll-with-animation class="container {{3==TabCur?'scrolltop':''}}" style="-webkit-overflow-scrolling:touch;" enable-back-to-top="true" scroll-y="true">
+  <block wx:for="{{dataList}}" wx:if="{{dataList.length > 0}}">
+    <view class="cu-card article no-card solids-top" data-id="{{item.id}}" bindtap="goDetail">
+      <view class="cu-item shadow">
+        <view class="title">
+          <view class="text-cut">{{item.title}}</view>
+        </view>
+        <view class="content">
+          <image src="{{item.tagImg}}" mode="aspectFill"></image>
+          <view class="desc">
+            <view class="text-content" style="height: auto;">{{item.tagName}}</view>
+          </view>
+        </view>
+        <view class="flex justify-between margin-lr-sm margin-top-sm">
+          <view class="text-gray text-df">{{item.startTime}}</view>
+          <view>
+            <!-- <text class="text-gray margin-left-sm" :src="{{item.link}}">查看更多</text> -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view wx:if="{{dataList.length === 0}}" class="no-data">
+    <text>哦豁，数据还在午睡</text>
+  </view>
+</scroll-view>
+<view class="cu-item vlogadd" bindtap="vlogAdd">
+    <text class="cuIcon-roundadd lg text-gray"></text>
+  </view>
+
+

@@ -1,0 +1,9 @@
+/* @import './iconfont-weapp-icon.wxss' */
+.cuIcon-share{
+  border: none!important;
+  background: #fff;
+  line-height: 1.0;
+}
+.cuIcon-share::after{
+  border: none!important;
+}
