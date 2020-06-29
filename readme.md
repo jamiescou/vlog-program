@@ -5,6 +5,15 @@
   2. 前端（管理端）： vue + elementUI
   3. 后端：koa2 + jwt + mysql
 
+## 部分效果图
+ ![avatar](images/1.jpg)
+ ![avatar](images/2.jpg)
+ ![avatar](images/3.jpg)
+ ![avatar](images/4.jpg)
+ ![avatar](images/5.jpg)
+ ![avatar](images/6.jpg)
+
+
 ## 
 ## H5/小程序端接口
 1. /sys/getTag?id=1  get 查询某一条数据

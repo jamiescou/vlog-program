@@ -1,4 +1,4 @@
 const config = {
-  baseUrl: 'https://api.xxx.com/sys'
+  baseUrl: 'https://api.chenmychou.cn/sys'
 }
 module.exports = config
